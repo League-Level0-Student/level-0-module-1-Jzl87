@@ -20,7 +20,7 @@ public class RobotInSpace extends KeyboardAdapter {
 	private boolean movingBackward = false;
 	private boolean turningLeft = false;
 	private boolean turningRight = false;
-
+	
 	/*
 	 * Make the Robot move around the screen when the arrow keys are pressed...
 	 * 
@@ -35,15 +35,25 @@ public class RobotInSpace extends KeyboardAdapter {
 		System.out.println(keyPressed);
 		
 		// 3. If the up arrow is pressed, move the Robot up the screen.
-		if (event.getKeyCode) {
-			
+		if (KeyEvent.VK_UP == keyPressed) {
+			rob.setAngle(0);
+			rob.move(20);
 		}
 		// 4. If the down arrow is pressed, move the Robot down.
-		
+		if (KeyEvent.VK_DOWN == keyPressed) {
+			rob.setAngle(180);
+			rob.move(20);
+		}
 		// 5. If the left arrow is pressed, make the Robot go left.
-		
+		if (KeyEvent.VK_LEFT == keyPressed) {
+			rob.setAngle(270);
+			rob.move(20);
+		}
 		// 6. If right is pressed, move the Robot right.
-		
+		if (KeyEvent.VK_RIGHT == keyPressed) {
+			rob.setAngle(90);
+			rob.move(20);
+		}
 		// 7. Run your program and move the Robot to R2-D2 for a surprise!
 		
 	}
